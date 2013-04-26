@@ -2,4 +2,15 @@
   "name": "Reflexive",
   "version": "0.0.1",
   "description": "Security suite for keeping you protected.",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["data.js", "password_bg.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["jquery.js", "password.js"],
+      "run_at": "document_end"
+    }
+  ]
 }
