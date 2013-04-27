@@ -1,7 +1,12 @@
 var PASSWORD_CONTANER = (function() {
   function check() {
-    if ($("input[type=password]").length > 1) {
-      get_password(4, {});
+    forms = $("form"); // Retrieve all forms on page
+    for(var i = 0; i < forms.length; i++) {
+      // Check if form has multiple password fields
+      if (forms.eq(i).find("input[type=password]").length > 1) {
+        get_password(4, {});
+        break;
+      }
     }
   }
 
