@@ -4,9 +4,9 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 });
 
 function generate_password(words, options) {
-  var password = "", word;
+  var password = "";
   for(var i = 0; i < words; i++) {
-    if ((words % 2 === 0 && i % 2 == 1) || (words % 2 == 1 && i % 2 == 0))
+    if (words < 2 || i >= (words / 2))
       password = password.concat(RFX_DATA.NOUNS[randn(RFX_DATA.NOUNS.length)]);
     else
       password = password.concat(RFX_DATA.ADJECTIVES[randn(RFX_DATA.ADJECTIVES.length)]);
