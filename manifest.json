@@ -6,6 +6,10 @@
   "background": {
     "scripts": ["data.js", "password_bg.js"]
   },
+  "browser_action": {
+    "default_title": "Reflexive",
+    "default_popup": "popup.html"
+  },
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
