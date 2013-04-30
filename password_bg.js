@@ -18,12 +18,25 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 });
 
 function generate_password(words, options) {
-  var password = "";
+  var password = "", n;
   for(var i = 0; i < words; i++) {
     if (words < 2 || i >= (words / 2))
       password = password.concat(RFX_DATA.NOUNS[randn(RFX_DATA.NOUNS.length)]);
     else
       password = password.concat(RFX_DATA.ADJECTIVES[randn(RFX_DATA.ADJECTIVES.length)]);
+  }
+  options.numeric_digits = options.numeric_digits || 0;
+  if (options.numeric_digits > 0) {
+    for(var i = 0; i < options.numeric_digits; i++) {
+      n = randn(9) + 1;
+      password = n + password;
+      if ((n > 1 || i > 0) && password.slice(password.length - 1) !== "s") {
+        if (password.slice(password.length - 1) === "y")
+          password = password.substr(0, str.length - 1) + "ies";
+        else
+          password = password + "s";
+      }
+    }
   }
   return password;
 }
