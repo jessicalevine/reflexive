@@ -1,6 +1,20 @@
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-  var password = generate_password(request.words, request.options);
-  sendResponse({"password": password});
+  response = {};
+  if (request.action === "password_notify") {
+    chrome.tabs.create({
+      url: chrome.extension.getURL('password.html'),
+      active: false
+    }, function(tab) {
+      chrome.windows.create({
+        tabId: tab.id,
+        type: 'popup',
+        width: 323,
+        height: 167,
+        focused: true
+      });
+    });
+  }
+  sendResponse(response);
 });
 
 function generate_password(words, options) {
