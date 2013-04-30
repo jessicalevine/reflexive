@@ -4,6 +4,10 @@ body {
 	margin: 0;
 }
 
+.centered {
+  text-align: center;
+}
+
 #head-wrapper {
 	padding: 2px;
 	width: 100%;
