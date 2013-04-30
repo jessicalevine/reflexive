@@ -2,10 +2,9 @@ body {
 	min-width: 323px;
 	font-family: 'Helvetica Neue', 'Helvetica', sans;
 	margin: 0;
-	/*color: #2388DB;*/
 }
 
-#top-wrapper {
+#head-wrapper {
 	padding: 2px;
 	width: 100%;
 	box-sizing: border-box;
@@ -14,24 +13,24 @@ body {
 	background-color: #2388DB;
 }
 
-#top-content {
+#head-content {
 	min-width: 1px;
 	margin: auto;
   padding-left: 2px;
 }
 
-#bottom-wrapper {
+#main-wrapper {
 	padding: 2px;
 	height: 67%;
 	width: 100%;
 	box-sizing: border-box;
 }
 
-#bottom-content {
+#main-content {
   padding-left: 2px;
 }
 
-.password {
+#password {
 	width: 100%;
 	text-align: center;
 }
