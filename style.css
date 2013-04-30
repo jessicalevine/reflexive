@@ -1,0 +1,35 @@
+body {
+	min-width: 323px;
+	min-height: 200px;
+	font-family: 'Helvetica Neue', 'Helvetica', sans;
+	margin: 0;
+}
+
+#top-wrapper {
+	padding: 2px;
+	height: 33%;
+	min-height: 66px;
+	width: 100%;
+	box-sizing: border-box;
+	color: #2388DB;
+}
+
+#top-content {
+	min-width: 1px;
+	margin: auto;
+}
+
+#bottom-wrapper {
+	padding: 2px;
+	height: 67%;
+	width: 100%;
+	min-height: 134px;
+	box-sizing: border-box;
+	color: #ffffff;
+	background-color: #2388DB;
+}
+
+.password {
+	width: 100%;
+	text-align: center;
+}
