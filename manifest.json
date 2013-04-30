@@ -8,6 +8,7 @@
   },
   "browser_action": {
     "default_title": "Reflexive",
+    "default_icon": "reflexive_19.png",
     "default_popup": "popup.html"
   },
   "content_scripts": [
